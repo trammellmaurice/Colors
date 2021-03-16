@@ -29,7 +29,8 @@ colors = {
 
 try:
     turtle = robot()
-    desired_color = str(input("RED, GREEN, BLUE, OR PINK?")).lower()
+    desired_color = str(input("RED, GREEN, BLUE, OR PINK?"))
+    print(desired_color)
     while not rospy.is_shutdown():
         frame = turtle.getImage()
         hsv_img = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
