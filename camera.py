@@ -58,7 +58,7 @@ try:
         }
         max_section = max(sections, key=sections.get)
 
-        if max_section > 100:
+        if sections[max_section] > 500:
             # print(max_section)
             if max_section == "left2":
                 print("LEFT")
