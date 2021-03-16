@@ -2,16 +2,17 @@ import rospy
 from turtleAPI import robot
 import cv2
 
+RED_MIN = np.array([100, 50, 50],np.uint8)
+RED_MAX = np.array([255, 50, 50],np.uint8)
+
 try:
     turtle = robot()
     while not rospy.is_shutdown():
         frame = turtle.getImage()
-        for pixel in frame:
-            if pixel[0] > pixel[1] and pixel[0] > pixel[2]:
-                pixel = (255,255,255)
-            else:
-                pixel = (0,0,0)
-        cv2.imshow("CAMERA",frame)
+        hsv_img = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
+
+        frame_threshed = cv2.inRange(hsv_img, RED_MIN, RED_MAX)
+        cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
 except:
     rospy.loginfo("Terminating")
