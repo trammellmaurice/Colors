@@ -39,9 +39,9 @@ try:
             red_thresh = cv2.inRange(hsv_img, np.array([170,50,50],np.uint8), np.array([180,255,255],np.uint8))
             frame_threshed += red_thresh
 
-        frame_threshed = np.array(frame_threshed)
-        print(frame_threshed.shape)
-        
+        frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
+
+
         detected_circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,param2 = 30, minRadius = 1)
         print(detected_circles)
 
