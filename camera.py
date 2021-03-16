@@ -22,6 +22,8 @@ colors = {
 try:
     # INITIALIZE TURTLEBOT API
     turtle = robot()
+
+
     # GET DESIRED COLOR
     desired_color = input("RED, GREEN, BLUE, OR PINK?")
     # print(colors[desired_color])
@@ -53,7 +55,12 @@ try:
             'right2':(right2 != 0).sum()
         }
         max_section = max(sections, key=sections.get)
-        print(max_section)
+
+        #TURN TURTLEBOT
+        if max_section == 'right2':
+            turtle.drive(-0.5,0)
+        if max_section == 'leftt2':
+            turtle.drive(0.5,0)
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
@@ -62,5 +69,6 @@ try:
         cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
 except Exception as e:
+    turtle.stop()
     print(e)
     rospy.loginfo("Terminating")
