@@ -39,14 +39,22 @@ try:
             red_thresh = cv2.inRange(hsv_img, np.array([170,50,50],np.uint8), np.array([180,255,255],np.uint8))
             frame_threshed += red_thresh
 
-        splits = np.hsplit(frame_threshed,5)
+        # SPLIT IMAGE INTO 5 SECTIONS
+        sections = np.hsplit(frame_threshed,5)
 
+        # REMOVE 0S
+        for section in sections:
+            section.sort()
+            section = np.trim_zeros(section)
+            section = section.size
+
+        print(sections[0],sections[1],sections[2],sections[3],sections[4])
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
         frame_threshed = cv2.blur(frame_threshed, (3, 3))
 
-        cv2.imshow("CAMERA",splits[2])
+        cv2.imshow("CAMERA",frame_threshed])
         cv2.waitKey(27)
 except Exception as e:
     print(e)
