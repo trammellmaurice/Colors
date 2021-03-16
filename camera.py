@@ -29,7 +29,7 @@ colors = {
 
 try:
     turtle = robot()
-    desired_color = str(input("RED, GREEN, BLUE, OR PINK?"))
+    desired_color = input("RED, GREEN, BLUE, OR PINK?")
     print(desired_color)
     while not rospy.is_shutdown():
         frame = turtle.getImage()
