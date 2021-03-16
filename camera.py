@@ -39,7 +39,7 @@ try:
             red_thresh = cv2.inRange(hsv_img, np.array([170,50,50],np.uint8), np.array([180,255,255],np.uint8))
             frame_threshed += red_thresh
 
-        print(frame_threshed.shape())
+        print(frame_threshed)
         circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1.2, 100)
 
         if circles is not None:
