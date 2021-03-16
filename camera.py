@@ -58,22 +58,23 @@ try:
         }
         max_section = max(sections, key=sections.get)
 
-        # print(max_section)
-        if max_section == "left2":
-            print("LEFT")
-            turtle.drive(0.5,0.2)
-        elif max_section == "left":
-            print("LEFT")
-            turtle.drive(0.25,0.5)
-        elif max_section == "front":
-            print("RIGHT")
-            turtle.drive(0,1)
-        elif max_section == "right":
-            print("RIGHT")
-            turtle.drive(-0.25,0.5)
-        elif max_section == "right2":
-            print("RIGHT")
-            turtle.drive(-0.5,0.2)
+        if max_section > 100:
+            # print(max_section)
+            if max_section == "left2":
+                print("LEFT")
+                turtle.drive(0.5,0.2)
+            elif max_section == "left":
+                print("LEFT")
+                turtle.drive(0.25,0.5)
+            elif max_section == "front":
+                print("RIGHT")
+                turtle.drive(0,1)
+            elif max_section == "right":
+                print("RIGHT")
+                turtle.drive(-0.25,0.5)
+            elif max_section == "right2":
+                print("RIGHT")
+                turtle.drive(-0.5,0.2)
 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
