@@ -42,7 +42,7 @@ try:
         splits = np.copy(frame_threshed)
         # SPLIT IMAGE INTO 5 SECTIONS
         sections = np.hsplit(splits,5)
-        print(sections.size)
+        print(len(sections))
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
