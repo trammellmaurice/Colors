@@ -41,14 +41,9 @@ try:
 
         frame_threshed = np.array(frame_threshed)
         print(frame_threshed.shape)
-        circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1.2, 100)
-
-        if circles is not None:
-            print("YES")
-            circles = np.round(circles[0, :]).astype("int")
-            for (x,y,r) in circles:
-               cv2.circle(frame_threshed, (x, y), r, (0, 255, 0), 4)
-               cv2.rectangle(frame_threshed, (x - 5, y - 5), (x + 5, y + 5), (255, 0, 0), -1)
+        
+        detected_circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,param2 = 30, minRadius = 1)
+        print(detected_circles)
 
         cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
