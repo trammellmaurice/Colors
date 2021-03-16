@@ -41,5 +41,6 @@ try:
             frame_threshed += red_thresh
         cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
-except:
+except Exception as e:
+    print(e)
     rospy.loginfo("Terminating")
