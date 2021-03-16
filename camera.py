@@ -58,13 +58,7 @@ try:
         }
         max_section = max(sections, key=sections.get)
 
-        #TURN TURTLEBOT
-        if max_section == 'right2':
-            print("right")
-            turtle.drive(-0.5,0)
-        else if max_section == 'leftt2':
-            print("left")
-            turtle.drive(0.5,0)
+        print(max_section)
 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
