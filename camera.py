@@ -52,7 +52,7 @@ try:
             'right':(right != 0).sum(),
             'right2':(right2 != 0).sum()
         }
-        max_section = max(sections, key=section.get) 
+        max_section = max(sections, key=sections.get) 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
