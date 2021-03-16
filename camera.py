@@ -58,6 +58,7 @@ try:
         }
         max_section = max(sections, key=sections.get)
 
+        #2 SPEED P CONTROLLER BASED ON LOCATION ON SCREEN
         if sections[max_section] > 500:
             # print(max_section)
             if max_section == "left2":
