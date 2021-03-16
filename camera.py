@@ -61,6 +61,12 @@ try:
         # print(max_section)
         if max_section == "left2":
             print("LEFT")
+        elif max_section == "left":
+            print("LEFT")
+        if max_section == "right":
+            print("RIGHT")
+        elif max_section == "right2":
+            print("RIGHT")
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
