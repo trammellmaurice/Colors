@@ -60,7 +60,9 @@ try:
 
         #TURN TURTLEBOT
         if max_section == 'right2':
+            print("right")
             turtle.drive(-0.5,0)
+            print("left")
         if max_section == 'leftt2':
             turtle.drive(0.5,0)
 
