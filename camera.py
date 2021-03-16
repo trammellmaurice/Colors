@@ -40,7 +40,7 @@ try:
             frame_threshed += red_thresh
 
         frame_threshed = np.array(frame_threshed)
-        print(frame_threshed)
+        print(frame_threshed.shape())
         circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1.2, 100)
 
         if circles is not None:
