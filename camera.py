@@ -11,7 +11,7 @@ colors = {
     "pink": {"min": np.array([135, 50, 20],np.uint8), "max": np.array([165, 255, 255],np.uint8)},
 
     # GREEN VALUES
-    "green":  {"min": np.array([80, 52, 72],np.uint8), "max": np.array([100, 255, 255],np.uint8)},
+    "green":  {"min": np.array([40, 52, 72],np.uint8), "max": np.array([100, 255, 255],np.uint8)},
 
     # RED VALUES (0-10)
     "red": {"min": np.array([0,50,50],np.uint8), "max": np.array([10,255,255],np.uint8)},
