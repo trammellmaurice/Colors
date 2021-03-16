@@ -43,7 +43,7 @@ try:
         # SPLIT COPY INTO 5 SECTIONS
         sections = np.hsplit(splits,5)
         front = sections[2]
-        num_ones = (front == 1).sum()
+        num_ones = (front != 0).sum()
 
         print(num_ones)
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
