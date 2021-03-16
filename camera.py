@@ -42,6 +42,7 @@ try:
         circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1.2, 100)
 
         if circles is not None:
+            print("YES")
     	       circles = np.round(circles[0, :]).astype("int")
                for (x,y,r) in circles:
                    cv2.circle(frame_threshed, (x, y), r, (0, 255, 0), 4)
