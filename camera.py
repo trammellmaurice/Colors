@@ -13,6 +13,9 @@ colors = {
     # GREEN VALUES
     "green":  {"min": np.array([40, 52, 72],np.uint8), "max": np.array([100, 255, 255],np.uint8)},
 
+    # YELLOW VALUES
+    "yellow":  {"min": np.array([50, 100, 40],np.uint8), "max": np.array([60, 255, 255],np.uint8)},
+
     # RED VALUES (0-10)
     "red": {"min": np.array([0,50,50],np.uint8), "max": np.array([10,255,255],np.uint8)},
 }
@@ -24,7 +27,7 @@ try:
 
 
     # GET DESIRED COLOR
-    desired_color = input("RED, GREEN, BLUE, OR PINK?")
+    desired_color = input("RED, GREEN, BLUE, YELLOW, OR PINK?")
     # print(colors[desired_color])
     while not rospy.is_shutdown():
 
