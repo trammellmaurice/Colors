@@ -41,11 +41,11 @@ try:
 
         splits = frame_threshed.copy()
         # SPLIT IMAGE INTO 5 SECTIONS
-        sections = np.hsplit(frame_threshed,5)
+        sections = np.hsplit(splits,5)
 
         # REMOVE 0S
-        for section in sections:
-            section.sort()
+        # for section in sections:
+        #     section.sort()
         #     section = np.trim_zeros(section)
         #     section = section.size
 
