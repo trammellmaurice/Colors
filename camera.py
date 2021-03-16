@@ -45,8 +45,7 @@ try:
 
         # REMOVE 0S
         for section in sections:
-            section.sort()
-            section = np.trim_zeros(section)
+            section = list(filter(lambda a: a != 0, section))
             # section = section.size
 
         print(sections[0],sections[1],sections[2],sections[3],sections[4])
