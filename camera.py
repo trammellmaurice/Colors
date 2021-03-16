@@ -42,10 +42,8 @@ try:
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
-        gray_blurred = cv2.blur(frame_threshed, (3, 3))
+        frame_threshed = cv2.blur(frame_threshed, (3, 3))
 
-        detected_circles = cv2.HoughCircles(gray_blurred, cv2.HOUGH_GRADIENT, 1, 10, np.array([]), 79, 23, 9, 26)
-        print(detected_circles)
 
         cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
