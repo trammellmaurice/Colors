@@ -5,7 +5,7 @@ import cv2
 
 colors = {
     # BLUE VALUES
-    "blue":{"min": np.array([90, 100, 20],np.uint8), "max": np.array([125, 255, 255],np.uint8)},
+    "blue":{"min": np.array([100, 150, 0],np.uint8), "max": np.array([180, 255, 255],np.uint8)},
 
     # PINK VALUES
     "pink": {"min": np.array([135, 50, 20],np.uint8), "max": np.array([165, 255, 255],np.uint8)},
