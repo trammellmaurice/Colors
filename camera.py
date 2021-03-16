@@ -67,7 +67,7 @@ try:
             turtle.drive(0.25,0)
         elif max_section == "front":
             print("RIGHT")
-            turtle.drive(0,0)
+            turtle.drive(0,1)
         elif max_section == "right":
             print("RIGHT")
             turtle.drive(-0.25,0)
