@@ -40,16 +40,19 @@ try:
             frame_threshed += red_thresh
 
         splits = np.copy(frame_threshed)
+
         # SPLIT COPY INTO 5 SECTIONS
         left2,left,front,right,right2 = np.hsplit(splits,5)
 
-        left2 = (left2 != 0).sum()
-        left = (left != 0).sum()
-        front = (front != 0).sum()
-        right = (right != 0).sum()
-        right2 = (right2 != 0).sum()
-
-        print(left2,left,front,right,right2)
+        #COUNT NON BLACK IN EACH SECTION
+        sections = {
+            'left2':(left2 != 0).sum(),
+            'left':(left != 0).sum(),
+            'front':(front != 0).sum(),
+            'right':(right != 0).sum(),
+            'right2':(right2 != 0).sum()
+        }
+        max = max(sections, key=sections.get)
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
