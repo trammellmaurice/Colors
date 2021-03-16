@@ -48,7 +48,7 @@ try:
             section = np.trim_zeros(section)
             section = section.size
 
-        print(sections[0],sections[1],sections[2],sections[3],sections[4])
+        #print(sections[0],sections[1],sections[2],sections[3],sections[4])
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
