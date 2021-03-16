@@ -24,7 +24,7 @@ colors = {
 try:
     # INITIALIZE TURTLEBOT API
     turtle = robot()
-
+    turtle.drive(0.5,0)
 
     # GET DESIRED COLOR
     desired_color = input("RED, GREEN, BLUE, YELLOW, OR PINK?")
