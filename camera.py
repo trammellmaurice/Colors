@@ -54,7 +54,7 @@ try:
         # Blur using 3 * 3 kernel.
         frame_threshed = cv2.blur(frame_threshed, (3, 3))
 
-        cv2.imshow("CAMERA",frame_threshed])
+        cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
 except Exception as e:
     print(e)
