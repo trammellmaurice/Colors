@@ -41,10 +41,6 @@ try:
 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
-
-        detected_circles = cv2.HoughCircles(frame_threshed, cv2.HOUGH_GRADIENT, 1, 20, param1 = 50,param2 = 30, minRadius = 1)
-        print(detected_circles)
-
         cv2.imshow("CAMERA",frame_threshed)
         cv2.waitKey(27)
 except Exception as e:
