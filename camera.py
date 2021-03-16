@@ -39,6 +39,7 @@ try:
             red_thresh = cv2.inRange(hsv_img, np.array([170,50,50],np.uint8), np.array([180,255,255],np.uint8))
             frame_threshed += red_thresh
 
+        splits = frame_threshed.copy()
         # SPLIT IMAGE INTO 5 SECTIONS
         sections = np.hsplit(frame_threshed,5)
 
