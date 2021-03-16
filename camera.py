@@ -43,8 +43,8 @@ try:
         sections = np.hsplit(frame_threshed,5)
 
         # REMOVE 0S
-        # for section in sections:
-        #     section.sort()
+        for section in sections:
+            section.sort()
         #     section = np.trim_zeros(section)
         #     section = section.size
 
