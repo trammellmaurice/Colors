@@ -7,12 +7,11 @@ colors = {
     # BLUE VALUES
     "blue":{"min": np.array([90, 100, 20],np.uint8), "max": np.array([125, 255, 255],np.uint8)},
 
-
     # PINK VALUES
     "pink": {"min": np.array([135, 50, 20],np.uint8), "max": np.array([165, 255, 255],np.uint8)},
 
     # GREEN VALUES
-    "green":  {"min": np.array([35, 100, 20],np.uint8), "max": np.array([75, 255, 255],np.uint8)},
+    "green":  {"min": np.array([35, 50, 20],np.uint8), "max": np.array([75, 255, 255],np.uint8)},
 
     # RED VALUES (0-10)
     "red": {"min": np.array([0,50,50],np.uint8), "max": np.array([10,255,255],np.uint8)},
@@ -61,6 +60,7 @@ try:
             turtle.drive(-0.5,0)
         if max_section == 'leftt2':
             turtle.drive(0.5,0)
+
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
