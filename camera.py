@@ -43,12 +43,15 @@ try:
         # SPLIT IMAGE INTO 5 SECTIONS
         sections = np.hsplit(splits,5)
 
+        counts = []
         # REMOVE 0S
-        for section in sections:
-            section = list(filter(lambda a: a != 0, section))
+        for i, section in enumerate(sections):
+            for number in section:
+                if number == 1:
+                    counts[i] +=1
             # section = section.size
 
-        print(sections[0],sections[1],sections[2],sections[3],sections[4])
+        print(counts)
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
         # Blur using 3 * 3 kernel.
