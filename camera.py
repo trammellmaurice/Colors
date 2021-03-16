@@ -67,8 +67,10 @@ try:
             turtle.drive(1,0)
         elif max_section == "right":
             print("RIGHT")
+            turtle.drive(-1,0)
         elif max_section == "right2":
             print("RIGHT")
+            turtle.drive(-1,0)
 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
