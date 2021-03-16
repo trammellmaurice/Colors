@@ -9,6 +9,9 @@ BLUE_MAX = np.array([125, 255, 255],np.uint8)
 PINK_MIN = np.array([135, 50, 20],np.uint8)
 PINK_MAX = np.array([165, 255, 255],np.uint8)
 
+GREEN_MIN = np.array([35, 100, 20],np.uint8)
+GREEN_MAX = np.array([75, 255, 255],np.uint8)
+
 try:
     turtle = robot()
     while not rospy.is_shutdown():
