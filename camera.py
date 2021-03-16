@@ -61,16 +61,19 @@ try:
         # print(max_section)
         if max_section == "left2":
             print("LEFT")
-            turtle.drive(1,0)
+            turtle.drive(0.5,0)
         elif max_section == "left":
             print("LEFT")
-            turtle.drive(1,0)
+            turtle.drive(0.25,0)
+        elif max_section == "front":
+            print("RIGHT")
+            turtle.drive(0,0)
         elif max_section == "right":
             print("RIGHT")
-            turtle.drive(-1,0)
+            turtle.drive(-0.25,0)
         elif max_section == "right2":
             print("RIGHT")
-            turtle.drive(-1,0)
+            turtle.drive(-0.5,0)
 
         frame_threshed = cv2.bitwise_and(frame,frame,mask = frame_threshed)
 
